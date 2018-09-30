@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionnaireActivity"
+    android:background="@color/colorBackground"
+    android:padding="16dp">
+    
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score: 0"
+        android:textColor="@android:color/black"
+        android:freezesText="true" />
+
+    <TextView
+        android:id="@+id/tv_qcount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question: 1 / x"
+        android:textColor="@android:color/black"
+        android:freezesText="true"
+        android:layout_below="@id/tv_score"/>
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:freezesText="true"
+        android:textColor="@android:color/black"
+        android:text="00:10"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:id="@+id/tv_question"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/radio_group"
+        android:layout_below="@id/tv_timer"
+        android:layout_marginBottom="16dp"
+        android:text="Question text over here"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:freezesText="true" />
+    
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+        
+        <RadioButton
+            android:freezesText="true"
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1"/>
+
+        <RadioButton
+            android:freezesText="true"
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 2"/>
+
+        <RadioButton
+            android:freezesText="true"
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 3"/>
+
+        <RadioButton
+            android:freezesText="true"
+            android:id="@+id/radio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 4"/>
+        
+    </RadioGroup>
+
+    <Button
+        android:freezesText="true"
+        android:id="@+id/bt_confirmnext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_group"
+        android:layout_marginTop="16dp"
+        android:text="Confirm"/>
+
+    <TextView
+        android:id="@+id/tv_trivia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_confirmnext"
+        android:padding="16dp"/>
+
+</RelativeLayout>
